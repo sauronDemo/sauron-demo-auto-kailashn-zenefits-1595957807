@@ -1,0 +1,18 @@
+general:
+  branches:
+    only:
+      - master
+
+test:
+  override:
+    - bash ci.sh 
+
+notify:
+  webhooks:
+    - url: https://sauron.zncloud.net/circleci/webhook/
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
